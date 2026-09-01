@@ -1,0 +1,13 @@
+crypto_snowflake: 
+  target: dev 
+  outputs: 
+    dev: 
+      type: snowflake 
+      account: YAGNJTJ-NY65354      
+      user: harishr
+      password: Ravisankarhar669$
+      role: ACCOUNTADMIN
+      database: CRYPTO_DB 
+      warehouse: COMPUTE_WH
+      schema: ANALYTICS 
+      threads: 1

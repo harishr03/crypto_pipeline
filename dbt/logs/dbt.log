@@ -1,0 +1,222 @@
+[0m01:27:38.513547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba8a0f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba7f7bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba7f7a50>]}
+
+
+============================== 01:27:38.516149 | 2900431a-2d47-4cb0-8c39-f7eae23d32b3 ==============================
+[0m01:27:38.516149 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:27:38.516514 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:27:39.294187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9837af10>]}
+[0m01:27:39.301209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9837af10>]}
+[0m01:27:39.301544 [info ] [MainThread]: Registered adapter: snowflake=1.5.1
+[0m01:27:39.306469 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:27:39.306926 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m01:27:39.307206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff986b96d0>]}
+[0m01:27:39.588655 [debug] [MainThread]: 1699: static parser successfully parsed bitcoin_clean.sql
+[0m01:27:39.611620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98344990>]}
+[0m01:27:39.614694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98b56e50>]}
+[0m01:27:39.614904 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 325 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:27:39.615132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2900431a-2d47-4cb0-8c39-f7eae23d32b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98b56e50>]}
+[0m01:27:39.615762 [info ] [MainThread]: 
+[0m01:27:39.616181 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m01:27:39.616731 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CRYPTO_DB'
+[0m01:27:39.622998 [debug] [ThreadPool]: Using snowflake connection "list_CRYPTO_DB"
+[0m01:27:39.623158 [debug] [ThreadPool]: On list_CRYPTO_DB: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB"} */
+show terse schemas in database CRYPTO_DB
+    limit 10000
+[0m01:27:39.623331 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:27:40.671695 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB"} */
+show terse schemas in database CRYPTO_DB
+    limit 10000
+[0m01:27:40.673285 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m01:27:40.674357 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m01:27:40.674978 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m01:27:40.675752 [debug] [ThreadPool]: On list_CRYPTO_DB: No close available on handle
+[0m01:27:40.677976 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:27:40.678672 [debug] [MainThread]: Connection 'list_CRYPTO_DB' was properly closed.
+[0m01:27:40.679339 [info ] [MainThread]: 
+[0m01:27:40.680122 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.06 seconds (1.06s).
+[0m01:27:40.681438 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "CRYPTO_DB"
+  Database Error
+    250001 (08001): Failed to connect to DB: YAGNJTJ-NY65354.snowflakecomputing.com:443. Incorrect username or password was specified.
+[0m01:27:40.683119 [debug] [MainThread]: Command `dbt run` failed at 01:27:40.682885 after 2.18 seconds
+[0m01:27:40.684024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba7f7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba7f7b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba7f7310>]}
+[0m01:27:40.684777 [debug] [MainThread]: Flushing usage events
+[0m01:28:53.257120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e7fde90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e536b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e536590>]}
+
+
+============================== 01:28:53.259584 | e2a895f1-179f-4086-8c24-f1d20a14c1a5 ==============================
+[0m01:28:53.259584 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:28:53.259876 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:28:53.972982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e483590>]}
+[0m01:28:53.979804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5c0a5b90>]}
+[0m01:28:53.980079 [info ] [MainThread]: Registered adapter: snowflake=1.5.1
+[0m01:28:53.984889 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:28:53.989164 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m01:28:53.989417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5c338ad0>]}
+[0m01:28:54.268406 [debug] [MainThread]: 1699: static parser successfully parsed bitcoin_clean.sql
+[0m01:28:54.290776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5c5da690>]}
+[0m01:28:54.293239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff57fc2a50>]}
+[0m01:28:54.293448 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 325 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:28:54.293647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff57fc2fd0>]}
+[0m01:28:54.294257 [info ] [MainThread]: 
+[0m01:28:54.294646 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m01:28:54.295130 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CRYPTO_DB'
+[0m01:28:54.301451 [debug] [ThreadPool]: Using snowflake connection "list_CRYPTO_DB"
+[0m01:28:54.301622 [debug] [ThreadPool]: On list_CRYPTO_DB: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB"} */
+show terse schemas in database CRYPTO_DB
+    limit 10000
+[0m01:28:54.301773 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:28:55.380428 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m01:28:55.383558 [debug] [ThreadPool]: On list_CRYPTO_DB: Close
+[0m01:28:56.021491 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CRYPTO_DB, now create_CRYPTO_DB_AANALYTICS)
+[0m01:28:56.023260 [debug] [ThreadPool]: Creating schema "database: "CRYPTO_DB"
+schema: "AANALYTICS"
+"
+[0m01:28:56.031705 [debug] [ThreadPool]: Using snowflake connection "create_CRYPTO_DB_AANALYTICS"
+[0m01:28:56.032395 [debug] [ThreadPool]: On create_CRYPTO_DB_AANALYTICS: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "create_CRYPTO_DB_AANALYTICS"} */
+create schema if not exists CRYPTO_DB.AANALYTICS
+[0m01:28:56.032797 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:28:56.626237 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m01:28:56.628617 [debug] [ThreadPool]: On create_CRYPTO_DB_AANALYTICS: Close
+[0m01:28:56.754890 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_CRYPTO_DB_AANALYTICS, now list_CRYPTO_DB_AANALYTICS)
+[0m01:28:56.767155 [debug] [ThreadPool]: Using snowflake connection "list_CRYPTO_DB_AANALYTICS"
+[0m01:28:56.767876 [debug] [ThreadPool]: On list_CRYPTO_DB_AANALYTICS: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB_AANALYTICS"} */
+show terse objects in CRYPTO_DB.AANALYTICS
+[0m01:28:56.768455 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:28:57.583562 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m01:28:57.586260 [debug] [ThreadPool]: On list_CRYPTO_DB_AANALYTICS: Close
+[0m01:28:57.677709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff79631c50>]}
+[0m01:28:57.679624 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:28:57.680398 [info ] [MainThread]: 
+[0m01:28:57.688324 [debug] [Thread-1  ]: Began running node model.crypto_transform.bitcoin_clean
+[0m01:28:57.689230 [info ] [Thread-1  ]: 1 of 1 START sql table model AANALYTICS.bitcoin_clean .......................... [RUN]
+[0m01:28:57.690441 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_CRYPTO_DB_AANALYTICS, now model.crypto_transform.bitcoin_clean)
+[0m01:28:57.690951 [debug] [Thread-1  ]: Began compiling node model.crypto_transform.bitcoin_clean
+[0m01:28:57.701241 [debug] [Thread-1  ]: Writing injected SQL for node "model.crypto_transform.bitcoin_clean"
+[0m01:28:57.703739 [debug] [Thread-1  ]: Timing info for model.crypto_transform.bitcoin_clean (compile): 01:28:57.691625 => 01:28:57.703452
+[0m01:28:57.704221 [debug] [Thread-1  ]: Began executing node model.crypto_transform.bitcoin_clean
+[0m01:28:57.727919 [debug] [Thread-1  ]: Writing runtime sql for node "model.crypto_transform.bitcoin_clean"
+[0m01:28:57.729765 [debug] [Thread-1  ]: Using snowflake connection "model.crypto_transform.bitcoin_clean"
+[0m01:28:57.730063 [debug] [Thread-1  ]: On model.crypto_transform.bitcoin_clean: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "node_id": "model.crypto_transform.bitcoin_clean"} */
+create or replace transient table CRYPTO_DB.AANALYTICS.bitcoin_clean
+         as
+        (
+
+SELECT 
+    raw_data:bitcoin.usd::FLOAT as bitcoin_price 
+    raw_data:bitcoin.last_updated_at::NUMBER as last_updated_epoch, 
+    raw_data:scraped_at::TIMESTAMP as ingestion_time 
+FROM CRYPTO_DB.RAW.BITCOIN_PRICES
+ORDER BY ingestion_time DESC
+        );
+[0m01:28:57.730343 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:28:58.078155 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01c22d58-0004-6850-000b-34ce00014832
+[0m01:28:58.079344 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 7 at position 4 unexpected 'raw_data'.
+syntax error line 11 at position 8 unexpected ')'.
+[0m01:28:58.080316 [debug] [Thread-1  ]: Timing info for model.crypto_transform.bitcoin_clean (execute): 01:28:57.704501 => 01:28:58.079993
+[0m01:28:58.080943 [debug] [Thread-1  ]: On model.crypto_transform.bitcoin_clean: Close
+[0m01:28:58.183143 [debug] [Thread-1  ]: Database Error in model bitcoin_clean (models/bitcoin_clean.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 7 at position 4 unexpected 'raw_data'.
+  syntax error line 11 at position 8 unexpected ')'.
+  compiled Code at target/run/crypto_transform/models/bitcoin_clean.sql
+[0m01:28:58.184458 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e2a895f1-179f-4086-8c24-f1d20a14c1a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c3dc450>]}
+[0m01:28:58.185536 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model AANALYTICS.bitcoin_clean ................. [[31mERROR[0m in 0.49s]
+[0m01:28:58.186536 [debug] [Thread-1  ]: Finished running node model.crypto_transform.bitcoin_clean
+[0m01:28:58.206638 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:28:58.207436 [debug] [MainThread]: Connection 'model.crypto_transform.bitcoin_clean' was properly closed.
+[0m01:28:58.208011 [info ] [MainThread]: 
+[0m01:28:58.208703 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 3.91 seconds (3.91s).
+[0m01:28:58.209901 [debug] [MainThread]: Command end result
+[0m01:28:58.221757 [info ] [MainThread]: 
+[0m01:28:58.222735 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m01:28:58.223594 [info ] [MainThread]: 
+[0m01:28:58.224277 [error] [MainThread]: [33mDatabase Error in model bitcoin_clean (models/bitcoin_clean.sql)[0m
+[0m01:28:58.224752 [error] [MainThread]:   001003 (42000): SQL compilation error:
+[0m01:28:58.225480 [error] [MainThread]:   syntax error line 7 at position 4 unexpected 'raw_data'.
+[0m01:28:58.225979 [error] [MainThread]:   syntax error line 11 at position 8 unexpected ')'.
+[0m01:28:58.226583 [error] [MainThread]:   compiled Code at target/run/crypto_transform/models/bitcoin_clean.sql
+[0m01:28:58.227205 [info ] [MainThread]: 
+[0m01:28:58.227830 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m01:28:58.228851 [debug] [MainThread]: Command `dbt run` failed at 01:28:58.228719 after 4.98 seconds
+[0m01:28:58.229380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e536e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e536350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e536590>]}
+[0m01:28:58.229806 [debug] [MainThread]: Flushing usage events
+[0m01:35:33.554906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff915e6e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff915e6fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff935a6b90>]}
+
+
+============================== 01:35:33.557671 | 069157cb-7835-4a57-bcaa-2def1d9282f9 ==============================
+[0m01:35:33.557671 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:35:33.558029 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:35:34.311692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff71208f10>]}
+[0m01:35:34.319202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff712085d0>]}
+[0m01:35:34.319550 [info ] [MainThread]: Registered adapter: snowflake=1.5.1
+[0m01:35:34.324505 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:35:34.336115 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:35:34.336367 [debug] [MainThread]: Partial parsing: updated file: crypto_transform://models/bitcoin_clean.sql
+[0m01:35:34.347886 [debug] [MainThread]: 1699: static parser successfully parsed bitcoin_clean.sql
+[0m01:35:34.357291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff716d6850>]}
+[0m01:35:34.359921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7108cb50>]}
+[0m01:35:34.360146 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 325 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:35:34.360375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7108cf90>]}
+[0m01:35:34.361085 [info ] [MainThread]: 
+[0m01:35:34.361528 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m01:35:34.362061 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CRYPTO_DB'
+[0m01:35:34.368447 [debug] [ThreadPool]: Using snowflake connection "list_CRYPTO_DB"
+[0m01:35:34.368603 [debug] [ThreadPool]: On list_CRYPTO_DB: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB"} */
+show terse schemas in database CRYPTO_DB
+    limit 10000
+[0m01:35:34.368738 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:35:35.502672 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m01:35:35.505721 [debug] [ThreadPool]: On list_CRYPTO_DB: Close
+[0m01:35:35.613194 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CRYPTO_DB, now list_CRYPTO_DB_AANALYTICS)
+[0m01:35:35.624194 [debug] [ThreadPool]: Using snowflake connection "list_CRYPTO_DB_AANALYTICS"
+[0m01:35:35.625044 [debug] [ThreadPool]: On list_CRYPTO_DB_AANALYTICS: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "connection_name": "list_CRYPTO_DB_AANALYTICS"} */
+show terse objects in CRYPTO_DB.AANALYTICS
+[0m01:35:35.625545 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:35:36.295674 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m01:35:36.298961 [debug] [ThreadPool]: On list_CRYPTO_DB_AANALYTICS: Close
+[0m01:35:36.509223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff70059690>]}
+[0m01:35:36.511098 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:35:36.511942 [info ] [MainThread]: 
+[0m01:35:36.519679 [debug] [Thread-1  ]: Began running node model.crypto_transform.bitcoin_clean
+[0m01:35:36.520715 [info ] [Thread-1  ]: 1 of 1 START sql table model AANALYTICS.bitcoin_clean .......................... [RUN]
+[0m01:35:36.522020 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_CRYPTO_DB_AANALYTICS, now model.crypto_transform.bitcoin_clean)
+[0m01:35:36.522921 [debug] [Thread-1  ]: Began compiling node model.crypto_transform.bitcoin_clean
+[0m01:35:36.533102 [debug] [Thread-1  ]: Writing injected SQL for node "model.crypto_transform.bitcoin_clean"
+[0m01:35:36.535674 [debug] [Thread-1  ]: Timing info for model.crypto_transform.bitcoin_clean (compile): 01:35:36.523548 => 01:35:36.535421
+[0m01:35:36.536101 [debug] [Thread-1  ]: Began executing node model.crypto_transform.bitcoin_clean
+[0m01:35:36.559928 [debug] [Thread-1  ]: Writing runtime sql for node "model.crypto_transform.bitcoin_clean"
+[0m01:35:36.561254 [debug] [Thread-1  ]: Using snowflake connection "model.crypto_transform.bitcoin_clean"
+[0m01:35:36.561532 [debug] [Thread-1  ]: On model.crypto_transform.bitcoin_clean: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "crypto_snowflake", "target_name": "dev", "node_id": "model.crypto_transform.bitcoin_clean"} */
+create or replace transient table CRYPTO_DB.AANALYTICS.bitcoin_clean
+         as
+        (
+
+SELECT 
+    raw_data:bitcoin.usd::FLOAT as bitcoin_price, 
+    raw_data:bitcoin.last_updated_at::NUMBER as last_updated_epoch, 
+    raw_data:scraped_at::TIMESTAMP as ingestion_time 
+FROM CRYPTO_DB.RAW.BITCOIN_PRICES
+ORDER BY ingestion_time DESC
+        );
+[0m01:35:36.561816 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:35:38.408545 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m01:35:38.435381 [debug] [Thread-1  ]: Timing info for model.crypto_transform.bitcoin_clean (execute): 01:35:36.536432 => 01:35:38.435165
+[0m01:35:38.436104 [debug] [Thread-1  ]: On model.crypto_transform.bitcoin_clean: Close
+[0m01:35:38.932727 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '069157cb-7835-4a57-bcaa-2def1d9282f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff68056e10>]}
+[0m01:35:38.934466 [info ] [Thread-1  ]: 1 of 1 OK created sql table model AANALYTICS.bitcoin_clean ..................... [[32mSUCCESS 1[0m in 2.41s]
+[0m01:35:38.935980 [debug] [Thread-1  ]: Finished running node model.crypto_transform.bitcoin_clean
+[0m01:35:39.023288 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:35:39.024587 [debug] [MainThread]: Connection 'model.crypto_transform.bitcoin_clean' was properly closed.
+[0m01:35:39.025257 [info ] [MainThread]: 
+[0m01:35:39.025959 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.66 seconds (4.66s).
+[0m01:35:39.027663 [debug] [MainThread]: Command end result
+[0m01:35:39.042024 [info ] [MainThread]: 
+[0m01:35:39.043032 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:35:39.043697 [info ] [MainThread]: 
+[0m01:35:39.044379 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m01:35:39.045543 [debug] [MainThread]: Command `dbt run` succeeded at 01:35:39.045411 after 5.50 seconds
+[0m01:35:39.046125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff935acf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff935a6a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff935a62d0>]}
+[0m01:35:39.046589 [debug] [MainThread]: Flushing usage events

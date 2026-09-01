@@ -1,0 +1,39 @@
+[2026-02-03T03:05:01.087+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_volatility_pipeline.extract_bitcoin_data scheduled__2026-02-03T03:00:00+00:00 [queued]>
+[2026-02-03T03:05:01.090+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_volatility_pipeline.extract_bitcoin_data scheduled__2026-02-03T03:00:00+00:00 [queued]>
+[2026-02-03T03:05:01.090+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2026-02-03T03:05:01.096+0000] {taskinstance.py:1350} INFO - Executing <Task(BashOperator): extract_bitcoin_data> on 2026-02-03 03:00:00+00:00
+[2026-02-03T03:05:01.098+0000] {standard_task_runner.py:57} INFO - Started process 35492 to run task
+[2026-02-03T03:05:01.101+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_volatility_pipeline', 'extract_bitcoin_data', 'scheduled__2026-02-03T03:00:00+00:00', '--job-id', '1768', '--raw', '--subdir', 'DAGS_FOLDER/crypto_dag.py', '--cfg-path', '/tmp/tmpt6_pu7l7']
+[2026-02-03T03:05:01.102+0000] {standard_task_runner.py:85} INFO - Job 1768: Subtask extract_bitcoin_data
+[2026-02-03T03:05:01.124+0000] {task_command.py:410} INFO - Running <TaskInstance: crypto_volatility_pipeline.extract_bitcoin_data scheduled__2026-02-03T03:00:00+00:00 [running]> on host 655395573b6f
+[2026-02-03T03:05:01.158+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='harish' AIRFLOW_CTX_DAG_ID='crypto_volatility_pipeline' AIRFLOW_CTX_TASK_ID='extract_bitcoin_data' AIRFLOW_CTX_EXECUTION_DATE='2026-02-03T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-03T03:00:00+00:00'
+[2026-02-03T03:05:01.159+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2026-02-03T03:05:01.159+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/dags/extract_data.py']
+[2026-02-03T03:05:01.162+0000] {subprocess.py:86} INFO - Output:
+[2026-02-03T03:05:01.711+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.7/site-packages/snowflake/connector/options.py:109 UserWarning: You have an incompatible version of 'pyarrow' installed (9.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2026-02-03T03:05:02.227+0000] {subprocess.py:93} INFO - Connecting to Snowflake...
+[2026-02-03T03:05:02.227+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:02.227+0000[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'snowflake_conn' for task execution.[0m
+[2026-02-03T03:05:02.228+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:02.228+0000[0m] {[34mconnection.py:[0m287} INFO[0m - Snowflake Connector for Python Version: 3.0.3, Python Version: 3.7.16, Platform: Linux-6.12.54-linuxkit-aarch64-with-debian-11.7[0m
+[2026-02-03T03:05:02.228+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:02.228+0000[0m] {[34mconnection.py:[0m990} INFO[0m - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.[0m
+[2026-02-03T03:05:02.228+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:02.228+0000[0m] {[34mconnection.py:[0m1007} INFO[0m - Setting use_openssl_only mode to False[0m
+[2026-02-03T03:05:03.027+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.027+0000[0m] {[34mcursor.py:[0m800} INFO[0m - query: [ALTER SESSION SET autocommit=False][0m
+[2026-02-03T03:05:03.298+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.297+0000[0m] {[34mcursor.py:[0m813} INFO[0m - query execution done[0m
+[2026-02-03T03:05:03.299+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.298+0000[0m] {[34mcursor.py:[0m956} INFO[0m - Number of results in first chunk: 1[0m
+[2026-02-03T03:05:03.299+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.299+0000[0m] {[34msql.py:[0m375} INFO[0m - Running statement: INSERT INTO CRYPTO_DB.RAW.BITCOIN_PRICES (raw_data)
+[2026-02-03T03:05:03.299+0000] {subprocess.py:93} INFO -                 SELECT PARSE_JSON('{"bitcoin": {"usd": 77715}, "scraped_at": "2026-02-03T03:05:01.845237"}'), parameters: None[0m
+[2026-02-03T03:05:03.300+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.299+0000[0m] {[34mcursor.py:[0m800} INFO[0m - query: [INSERT INTO CRYPTO_DB.RAW.BITCOIN_PRICES (raw_data) SELECT PARSE_JSON('{"bitcoin...][0m
+[2026-02-03T03:05:03.942+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.942+0000[0m] {[34mcursor.py:[0m813} INFO[0m - query execution done[0m
+[2026-02-03T03:05:03.943+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.942+0000[0m] {[34msql.py:[0m384} INFO[0m - Rows affected: 1[0m
+[2026-02-03T03:05:03.943+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.942+0000[0m] {[34msnowflake.py:[0m391} INFO[0m - Rows affected: 1[0m
+[2026-02-03T03:05:03.943+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.943+0000[0m] {[34msnowflake.py:[0m392} INFO[0m - Snowflake query id: 01c22819-0004-684f-000b-34ce00016622[0m
+[2026-02-03T03:05:03.943+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:03.943+0000[0m] {[34mcursor.py:[0m800} INFO[0m - query: [COMMIT][0m
+[2026-02-03T03:05:04.414+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:04.413+0000[0m] {[34mcursor.py:[0m813} INFO[0m - query execution done[0m
+[2026-02-03T03:05:04.415+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:04.414+0000[0m] {[34mcursor.py:[0m956} INFO[0m - Number of results in first chunk: 1[0m
+[2026-02-03T03:05:04.415+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:04.414+0000[0m] {[34mconnection.py:[0m586} INFO[0m - closed[0m
+[2026-02-03T03:05:04.468+0000] {subprocess.py:93} INFO - [[34m2026-02-03T03:05:04.467+0000[0m] {[34mconnection.py:[0m589} INFO[0m - No async queries seem to be running, deleting session[0m
+[2026-02-03T03:05:04.545+0000] {subprocess.py:93} INFO - Success! Data loaded into Snowflake.
+[2026-02-03T03:05:04.726+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-03T03:05:04.739+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=crypto_volatility_pipeline, task_id=extract_bitcoin_data, execution_date=20260203T030000, start_date=20260203T030501, end_date=20260203T030504
+[2026-02-03T03:05:04.757+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2026-02-03T03:05:04.765+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
